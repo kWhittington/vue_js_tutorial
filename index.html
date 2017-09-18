@@ -34,5 +34,42 @@
       }
     })
   </script>
+
+  <!-- 2. Conditionals and Loops -->
+  <div id="app-3">
+    <p v-if="seen">
+      Now you see me.
+    </p>
+  </div>
+
+  <script>
+    let app3 = new Vue({
+      el: '#app-3',
+      data: {
+        seen: true
+      }
+    })
+  </script>
+
+  <div id="app-4">
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ol>
+  </div>
+
+  <script>
+    let app4 = new Vue({
+      el: '#app-4',
+      data: {
+        todos: [
+          { text: 'Learn JavaScript' },
+          { text: 'Learn Vue' },
+          { text: 'Build something awesome' }
+        ]
+      }
+    })
+  </script>
 </body>
 </html>
